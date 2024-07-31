@@ -21,31 +21,28 @@ Esta aplicación web React proporciona un mapa interactivo con funcionalidades d
 
 ## 📦 Dependencias
 
-`````jsonCopy{
-"dependencies": {
-"chart.js": "^4.4.3",
-"dotenv": "^16.4.5",
-"leaflet": "^1.9.4",
-"leaflet.markercluster": "^1.5.3",
-"react": "^18.3.1",
-"react-chartjs-2": "^5.2.0",
-"react-dom": "^18.3.1",
-"react-leaflet": "^4.2.1"
+```
+jsonCopy{
+    "dependencies": {
+    "chart.js": "^4.4.3",
+    "dotenv": "^16.4.5",
+    "leaflet": "^1.9.4",
+    "leaflet.markercluster": "^1.5.3",
+    "react": "^18.3.1",
+    "react-chartjs-2": "^5.2.0",
+    "react-dom": "^18.3.1",
+    "react-leaflet": "^4.2.1"
+    }
 }
-}````
+```
+
 ## 🚀 Instalación
 
-Clona este repositorio
-Copygit clone https://github.com/tu-usuario/tu-repositorio.git
+git clone ""
+npm install
+npm run dev
 
-Instala las dependencias
-Copynpm install
-
-Crea un archivo .env en la raíz del proyecto y configura las variables de entorno necesarias
-Ejecuta la aplicación en modo desarrollo
-Copynpm start
-
-📖 Uso
+## 📖 Uso
 
 Carga tu archivo JSON con la estructura requerida
 La aplicación generará automáticamente un mapa interactivo con los puntos, filtros y colores especificados en el JSON
@@ -53,7 +50,8 @@ Utiliza los filtros para refinar la visualización de los datos
 Usa el buscador para encontrar ubicaciones específicas
 Explora los gráficos generados a partir de los datos
 
-📄 Estructura del archivo JSON
+## 📄 Estructura del archivo JSON
+
 Para que la aplicación funcione correctamente, el archivo JSON debe tener la siguiente estructura:
 jsonCopy{
 "points": [
@@ -81,7 +79,9 @@ jsonCopy{
 "Categoría C": "#0000FF"
 }
 }
-🤝 Contribución
+
+## 🤝 Contribución
+
 Las contribuciones son bienvenidas. Por favor, sigue estos pasos:
 
 Haz fork del proyecto
@@ -90,9 +90,7 @@ Haz commit de tus cambios (git commit -m 'Add some AmazingFeature')
 Haz push a la rama (git push origin feature/AmazingFeature)
 Abre un Pull Request
 
-📜 Licencia
-Distribuido bajo la licencia MIT. Ver LICENSE para más información.
-📞 Contacto
+## 📞 Contacto
+
 Tu Nombre - @tu_twitter - email@ejemplo.com
 Link del proyecto: https://github.com/tu-usuario/tu-repositorio
-`````
