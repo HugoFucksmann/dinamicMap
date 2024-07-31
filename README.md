@@ -19,8 +19,9 @@ Esta aplicación web React proporciona un mapa interactivo con funcionalidades d
 - 📈 Chart.js 4.4.3 para la creación de gráficos
 - 🔐 dotenv 16.4.5 para la gestión de variables de entorno
 
-📦 Dependencias
-jsonCopy{
+## 📦 Dependencias
+
+````jsonCopy{
 "dependencies": {
 "chart.js": "^4.4.3",
 "dotenv": "^16.4.5",
@@ -31,8 +32,8 @@ jsonCopy{
 "react-dom": "^18.3.1",
 "react-leaflet": "^4.2.1"
 }
-}
-🚀 Instalación
+}```
+## 🚀 Instalación
 
 Clona este repositorio
 Copygit clone https://github.com/tu-usuario/tu-repositorio.git
@@ -94,3 +95,4 @@ Distribuido bajo la licencia MIT. Ver LICENSE para más información.
 📞 Contacto
 Tu Nombre - @tu_twitter - email@ejemplo.com
 Link del proyecto: https://github.com/tu-usuario/tu-repositorio
+````
