@@ -1,0 +1,43 @@
+{
+  "legend": {
+    "urlTitle": "https://wms.ign.gob.ar/geoserver/gwc/service/tms/1.0.0/capabaseargenmap@EPSG%3A3857@png/{z}/{x}/{-y}.png",
+    "text": "Instituto Geográfico Nacional",
+    "url": "https://www.ign.gob.ar/",
+    "urlText": "IGN"
+  },
+  "legendOptions": {
+    "title": "Puntos Violeta",
+    "colorKey": "purple",
+    "items": ["Puntos Violeta"]
+  },
+  "keyPoints": {
+    "tooltipTxt": "localidad",
+    "keysToShow": {
+      "referente": "Referente",
+      "localidad": "Localidad",
+      "ubicacion": "Ubicacion"
+    }
+  },
+  "charts": [
+    {
+      "filterKey": "localidad",
+      "title": "porcentajes por localidad"
+    }
+  ],
+  "featureKeys": {
+    "keyLocalidad": "localidad"
+  },
+  "filtersData": {
+    "ClearAllFilters": {},
+    "SelectFilterTwo": {
+      "dataKey": "localidad",
+      "label": "Filtrar por localidad:"
+    }
+  },
+  "infoTab": {
+    "title": "Puntos Violeta",
+    "items": [
+      "Los Puntos Violetas serán espacios de igualdad de derechos que se construirán en 40 localidades de la provincia, en el marco del Plan Incluir, donde las mujeres y personas de la diversidad sexual podrán acceder a los programas, iniciativas y políticas públicas del Ministerio de Igualdad, Género y Diversidad."
+    ]
+  }
+}

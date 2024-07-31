@@ -1,0 +1,80 @@
+{
+  "legend": {
+    "urlTitle": "https://wms.ign.gob.ar/geoserver/gwc/service/tms/1.0.0/capabaseargenmap@EPSG%3A3857@png/{z}/{x}/{-y}.png",
+    "text": "Instituto Geográfico Nacional",
+    "url": "https://www.ign.gob.ar/",
+    "urlText": "IGN"
+  },
+  "legendOptions": {
+    "title": "Tipo",
+    "colorKey": "tipo",
+    "items": [
+      "Familia, Niñez y Adolescencia",
+      "Legal",
+      "Áreas de Género y Diversidad",
+      "Seguridad",
+      "Salud",
+      "Otra"
+    ]
+  },
+  "keyPoints": {
+    "tooltipTxt": "institucion",
+    "keysToShow": {
+      "correo_electronico": "Correo Electronico",
+      "direccion": "Direccion",
+      "horario": "Horario",
+      "institucion": "Institucion",
+      "iup_modificacionlatitud": "Iup Modificacion latitud",
+      "localidad": "Localidad",
+      "mas_info": "Mas Info",
+      "municipio": "Municipio",
+      "provincia": "Provincia",
+      "telefono": "Telefono",
+      "tipo": "Tipo",
+      "web": "Web"
+    }
+  },
+  "charts": [
+    {
+      "filterKey": "tipo",
+      "title": "porcentajes por tipo"
+    }
+  ],
+  "featureKeys": {
+    "keyNombre": "institucion",
+    "keyLegend": "tipo",
+    "keyLocalidad": "localidad",
+    "keyDepartamento": "municipio"
+  },
+  "filtersData": {
+    "ClearAllFilters": {},
+    "TextSearch": {
+      "label": "Buscar por Institucion"
+    },
+    "SelectFilterOne": {
+      "dataKey": "municipio",
+      "label": "Filtrar por municipio:"
+    },
+    "CheckboxFilter": {
+      "checkBoxOp": [
+        "Familia, Niñez y Adolescencia",
+        "Legal",
+        "Áreas de Género y Diversidad",
+        "Seguridad",
+        "Salud",
+        "Otra"
+      ],
+      "keyTextCheckBox": "Tipo"
+    }
+  },
+  "infoTab": {
+    "title": "Líneas gratuitas de información, contención y asesoramiento para prevenir la violencia de género",
+    "items": [
+      "• Borrar Todos los Filtros: Restablece los filtros para ver todos los puntos en el mapa.",
+      "• Búsqueda de Institucion: Encuentra puntos por filtro de texto.",
+      "• Filtrar por municipio: Selecciona un municipio para ver lugares en esa área.",
+      "• Filtrar por localidad: Encuentra puntos en función de la localidad.",
+      "• Filtrar por tipo: Utiliza casillas para afinar tus preferencias."
+    ]
+  }
+}

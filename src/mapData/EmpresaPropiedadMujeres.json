@@ -1,0 +1,78 @@
+{
+  "geoJSONData": "empresa_propiedad_mujeres",
+  "legend": {
+    "urlTitle": "https://wms.ign.gob.ar/geoserver/gwc/service/tms/1.0.0/capabaseargenmap@EPSG%3A3857@png/{z}/{x}/{-y}.png",
+    "text": "Instituto Geográfico Nacional",
+    "url": "https://www.ign.gob.ar/",
+    "urlText": "IGN"
+  },
+  "legendOptions": {
+    "title": "Rubro",
+    "colorKey": "rubro",
+    "items": [
+      "Comercio",
+      "Servicios",
+      "Industria",
+      "Agropecuario",
+      "Construcción",
+      "Arte"
+    ]
+  },
+  "keyPoints": {
+    "tooltipTxt": "nombre",
+    "keysToShow": {
+      "nombre": "Nombre",
+      "rubro": "Rubro",
+      "sitio_web": "Sitio web",
+      "localidad": "Localidad",
+      "departamento": "Departamento"
+    }
+  },
+  "charts": [
+    {
+      "filterKey": "rubro",
+      "title": "porcentajes por rubro"
+    }
+  ],
+  "featureKeys": {
+    "keyNombre": "nombre",
+    "keyLegend": "rubro",
+    "keyLocalidad": "localidad",
+    "keyDepartamento": "departamento"
+  },
+  "filtersData": {
+    "ClearAllFilters": {},
+    "TextSearch": {
+      "label": "Buscar por Institucion"
+    },
+    "SelectFilterOne": {
+      "dataKey": "departamento",
+      "label": "Filtrar por departamento:"
+    },
+    "SelectFilterTwo": {
+      "dataKey": "localidad",
+      "label": "Filtrar por localidad:"
+    },
+    "CheckboxFilter": {
+      "checkBoxOp": [
+        "Construcción",
+        "Servicios",
+        "Agropecuario",
+        "Arte",
+        "Comercio",
+        "Industria"
+      ],
+      "keyTextCheckBox": "Rubro"
+    }
+  },
+  "infoTab": {
+    "title": "",
+    "items": [
+      "• Borrar Todos los Filtros: Restablece los filtros para ver todos los puntos en el mapa.",
+      "• Búsqueda de Institucion: Encuentra puntos por filtro de texto.",
+      "• Filtrar por Departamento: Selecciona un departamento para ver lugares en esa área.",
+      "• Filtrar por Localidad: Encuentra puntos en función de la localidad.",
+      "• Filtrar por Rubro: Utiliza casillas para afinar tus preferencias."
+    ]
+  }
+}

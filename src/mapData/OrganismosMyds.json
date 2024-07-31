@@ -1,0 +1,51 @@
+{
+  "legend": {
+    "urlTitle": "https://wms.ign.gob.ar/geoserver/gwc/service/tms/1.0.0/capabaseargenmap@EPSG%3A3857@png/{z}/{x}/{-y}.png",
+    "text": "Instituto Geográfico Nacional",
+    "url": "https://www.ign.gob.ar/",
+    "urlText": "IGN"
+  },
+  "legendOptions": {
+    "title": "organismos y organizaciones",
+    "colorKey": "purple",
+    "items": ["organismos y organizaciones"]
+  },
+  "keyPoints": {
+    "tooltipTxt": "nombre",
+    "keysToShow": {
+      "nombre": "Nombre",
+      "anio": "Año",
+      "convenio_por": "Convenio por",
+      "direccion": "Direccion",
+      "email": "Email",
+      "localidad": "localidad",
+      "nombre_apellido_r1": "Apellido",
+      "telefono": "Telefono",
+      "tematica_objetivos": "Tematica objetivos"
+    }
+  },
+  "charts": [
+    {
+      "filterKey": "localidad",
+      "title": "porcentajes por localidad"
+    }
+  ],
+  "featureKeys": {
+    "keyNombre": "nombre",
+    "keyLocalidad": "localidad"
+  },
+  "filtersData": {
+    "ClearAllFilters": {},
+    "TextSearch": {
+      "label": "Buscar por Nombre"
+    },
+    "SelectFilterTwo": {
+      "dataKey": "localidad",
+      "label": "Filtrar por localidad:"
+    }
+  },
+  "infoTab": {
+    "title": "Organismos y Organizaciones",
+    "items": ["Organizaciones de la sociedad civil que trabajan en los territorios de la provincia con mujeres y disidencias, a los fines de articular políticas públicas tendientes a garantizar derechos y prevenir todas las formas de violencia y discriminación por motivos de género."]
+  }
+}

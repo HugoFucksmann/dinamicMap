@@ -1,0 +1,18 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -60.71229,
+          -31.65304
+        ]
+      },
+      "properties": {
+        "name": "Ministerio de Igualdad, Genero y Diversidad"
+      }
+    }
+  ]
+}

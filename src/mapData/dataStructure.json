@@ -1,0 +1,31 @@
+{
+  "legend": {
+    "urlTitle": "https://wms.ign.gob.ar/geoserver/gwc/service/tms/1.0.0/capabaseargenmap@EPSG%3A3857@png/{z}/{x}/{-y}.png",
+    "text": "Instituto Geográfico Nacional",
+    "url": "https://www.ign.gob.ar/",
+    "urlText": "IGN"
+  },
+  "legendOptions": {
+    "title": "",
+    "colorKey": "",
+    "items": []
+  },
+  "keyPoints": {
+    "tooltipTxt": "",
+    "keysToShow": {}
+  },
+  "charts": [
+    {
+      "filterKey": "",
+      "title": ""
+    }
+  ],
+  "featureKeys": {
+    "keyLocalidad": ""
+  },
+  "filtersData": {},
+  "infoTab": {
+    "title": "",
+    "items": []
+  }
+}

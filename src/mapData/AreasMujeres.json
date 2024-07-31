@@ -1,0 +1,47 @@
+{
+  "legend": {
+    "urlTitle": "https://wms.ign.gob.ar/geoserver/gwc/service/tms/1.0.0/capabaseargenmap@EPSG%3A3857@png/{z}/{x}/{-y}.png",
+    "text": "Instituto Geográfico Nacional",
+    "url": "https://www.ign.gob.ar/",
+    "urlText": "IGN"
+  },
+  "legendOptions": {
+    "title": "Areas de la mujer",
+    "colorKey": "region",
+    "items": ["Region 1", "Region 2", "Region 3", "Region 4", "Region 5"]
+  },
+  "keyPoints": {
+    "tooltipTxt": "loc",
+    "keysToShow": {
+      "loc": "Localidad",
+      "region": "Region"
+    }
+  },
+  "charts": [
+    {
+      "filterKey": "region",
+      "title": "Porcentaje por Region"
+    }
+  ],
+  "featureKeys": {
+    "keyLocalidad": "loc",
+    "keyDepartamento": "region"
+  },
+  "filtersData": {
+    "ClearAllFilters": {},
+    "SelectFilterOne": {
+      "dataKey": "region",
+      "label": "Filtrar por Region:"
+    },
+    "SelectFilterTwo": {
+      "dataKey": "loc",
+      "label": "Filtrar por localidad:"
+    }
+  },
+  "infoTab": {
+    "title": "Área de la Mujer",
+    "items": [
+      "El Área de la Mujer es un espacio que brinda atención, acompañamiento y abordaje en problemáticas como la violencia y la discriminación de las mujeres. También ayuda en proyectos personales relacionados con su educación, trabajo, familia y formación.       "
+    ]
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "legend": {
+    "urlTitle": "https://wms.ign.gob.ar/geoserver/gwc/service/tms/1.0.0/capabaseargenmap@EPSG%3A3857@png/{z}/{x}/{-y}.png",
+    "text": "Instituto Geográfico Nacional",
+    "url": "https://www.ign.gob.ar/",
+    "urlText": "IGN"
+  },
+  "legendOptions": {
+    "title": "Cuidado de",
+    "colorKey": "cuidado_de",
+    "items": [
+      "Infancias",
+      "Discapacidad",
+      "Personas mayores",
+      "Formación en cuidados"
+    ]
+  },
+  "keyPoints": {
+    "tooltipTxt": "institucion",
+    "keysToShow": {
+      "calle": "Calle",
+      "cuidado_de": "Cuidado de",
+      "institucion": "Institucion",
+      "localidad": "Localidad",
+      "departamento": "Departamento",
+      "mail": "Mail",
+      "telefono": "Telefono",
+      "tipo_de_gestion": "Tipo de gestion"
+    }
+  },
+  "charts": [
+    {
+      "filterKey": "cuidado_de",
+      "title": "porcentajes por cuidado de"
+    },
+    {
+      "filterKey": "tipo_de_gestion",
+      "title": "porcentajes por tipo de gestion"
+    }
+  ],
+  "featureKeys": {
+    "keyNombre": "institucion",
+    "keyLegend": "cuidado_de",
+    "keyLocalidad": "localidad",
+    "keyDepartamento": "departamento"
+  },
+  "filtersData": {
+    "ClearAllFilters": {},
+    "TextSearch": {
+      "label": "Buscar por Institucion"
+    },
+    "SelectFilterOne": {
+      "dataKey": "departamento",
+      "label": "Filtrar por departamento:"
+    },
+    "CheckboxFilter": {
+      "checkBoxOp": [
+        "Infancias",
+        "Discapacidad",
+        "Personas mayores",
+        "Formación en cuidados"
+      ],
+      "keyTextCheckBox": "Cuidado de"
+    }
+  },
+  "infoTab": {
+    "title": "",
+    "items": [
+      "• Borrar Todos los Filtros: Restablece los filtros para ver todos los puntos en el mapa.",
+      "• Búsqueda de Institucion: Encuentra puntos por filtro de texto.",
+      "• Filtrar por Departamento: Selecciona un departamento para ver lugares en esa área.",
+      "• Filtrar por Localidad: Encuentra puntos en función de la localidad.",
+      "• Filtrar por Cuidado de: Utiliza casillas para afinar tus preferencias."
+    ]
+  }
+}
