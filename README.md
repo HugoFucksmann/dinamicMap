@@ -1,21 +1,23 @@
-##Aplicación de Mapas Interactivos React
-📝 #Descripción
+# Aplicación de Mapas Interactivos React
+
+## 📝 Descripción
+
 Esta aplicación web React proporciona un mapa interactivo con funcionalidades de filtrado, búsqueda, visualización de puntos en el mapa y gráficos estadísticos. La característica más destacada es su capacidad para generar automáticamente un nuevo mapa con filtros, puntos y colores personalizados simplemente cargando un archivo JSON con una estructura predefinida.
 ✨ Características principales
 
-🗺️ Mapa interactivo con marcadores
-🔍 Filtros dinámicos
-🔎 Buscador integrado
-📊 Visualización de datos mediante gráficos
-🔄 Generación automática de mapas a partir de archivos JSON
+- 🗺️ Mapa interactivo con marcadores
+- 🔍 Filtros dinámicos
+- 🔎 Buscador integrado
+- 📊 Visualización de datos mediante gráficos
+- 🔄 Generación automática de mapas a partir de archivos JSON
 
-🛠️ Tecnologías utilizadas
+# 🛠️ Tecnologías utilizadas
 
-⚛️ React 18.3.1
-🌐 Context API para el manejo del estado
-🍃 Leaflet 1.9.4 para la visualización de mapas
-📈 Chart.js 4.4.3 para la creación de gráficos
-🔐 dotenv 16.4.5 para la gestión de variables de entorno
+- ⚛️ React 18.3.1
+- 🌐 Context API para el manejo del estado
+- 🍃 Leaflet 1.9.4 para la visualización de mapas
+- 📈 Chart.js 4.4.3 para la creación de gráficos
+- 🔐 dotenv 16.4.5 para la gestión de variables de entorno
 
 📦 Dependencias
 jsonCopy{
