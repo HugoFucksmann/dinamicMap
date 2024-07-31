@@ -21,7 +21,7 @@ Esta aplicación web React proporciona un mapa interactivo con funcionalidades d
 
 ## 📦 Dependencias
 
-````jsonCopy{
+`````jsonCopy{
 "dependencies": {
 "chart.js": "^4.4.3",
 "dotenv": "^16.4.5",
@@ -32,7 +32,7 @@ Esta aplicación web React proporciona un mapa interactivo con funcionalidades d
 "react-dom": "^18.3.1",
 "react-leaflet": "^4.2.1"
 }
-}```
+}````
 ## 🚀 Instalación
 
 Clona este repositorio
@@ -95,4 +95,4 @@ Distribuido bajo la licencia MIT. Ver LICENSE para más información.
 📞 Contacto
 Tu Nombre - @tu_twitter - email@ejemplo.com
 Link del proyecto: https://github.com/tu-usuario/tu-repositorio
-````
+`````
