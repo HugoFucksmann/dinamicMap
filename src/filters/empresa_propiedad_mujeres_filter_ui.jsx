@@ -64,7 +64,7 @@ const SelectFilter = ({
 
 const SelectFilterOne = ({ geoJSONData }) => {
   const { selectedTwo, handleSelectOne } = useGlobalContext();
-  console.log("selectedTwo ", selectedTwo);
+
   return (
     <SelectFilter
       dataKey="departamento"
