@@ -100,8 +100,8 @@ body {
 .back-button {
   position: fixed;
   top: 1rem;
-  left: 1rem;
-  z-index: 60;
+  right: 4rem;
+  z-index: 999;
   background-color: white;
   color: var(--primary-color);
   padding: 0.5rem 1rem;

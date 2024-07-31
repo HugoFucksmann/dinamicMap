@@ -1,8 +1,8 @@
 import React from "react";
-import CustomMapContainer from "../customMapContainer";
-import GlobalMap from "../maps/globalMap";
-import { GlobalProvider } from "../context/globalContext";
-import Sidebar from "../sidebar/sideBar";
+import CustomMapContainer from "./customMapContainer";
+import GlobalMap from "./maps/globalMap";
+import { GlobalProvider } from "./context/globalContext";
+import Sidebar from "./sidebar/sideBar";
 
 const GenericMapController = ({ geoJSONData, mapData }) => {
   const {
