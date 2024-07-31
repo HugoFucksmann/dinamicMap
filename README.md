@@ -22,8 +22,7 @@ Esta aplicación web React proporciona un mapa interactivo con funcionalidades d
 ## 📦 Dependencias
 
 ```
-jsonCopy{
-    "dependencies": {
+{
     "chart.js": "^4.4.3",
     "dotenv": "^16.4.5",
     "leaflet": "^1.9.4",
@@ -32,65 +31,94 @@ jsonCopy{
     "react-chartjs-2": "^5.2.0",
     "react-dom": "^18.3.1",
     "react-leaflet": "^4.2.1"
-    }
 }
 ```
 
 ## 🚀 Instalación
 
-git clone ""
-npm install
-npm run dev
+- git clone "https://github.com/HugoFucksmann/dinamicMap"
+- cd dinamicMap
+- npm install
+- npm run dev
 
 ## 📖 Uso
 
-Carga tu archivo JSON con la estructura requerida
-La aplicación generará automáticamente un mapa interactivo con los puntos, filtros y colores especificados en el JSON
-Utiliza los filtros para refinar la visualización de los datos
-Usa el buscador para encontrar ubicaciones específicas
-Explora los gráficos generados a partir de los datos
+- Carga tu archivo JSON con la estructura requerida
+- La aplicación generará automáticamente un mapa interactivo con los puntos, filtros y colores especificados en el JSON
+- Utiliza los filtros para refinar la visualización de los datos
+- Usa el buscador para encontrar ubicaciones específicas
+- Explora los gráficos generados a partir de los datos
 
 ## 📄 Estructura del archivo JSON
 
 Para que la aplicación funcione correctamente, el archivo JSON debe tener la siguiente estructura:
-jsonCopy{
-"points": [
-{
-"id": "1",
-"lat": 40.416775,
-"lng": -3.703790,
-"title": "Punto 1",
-"category": "Categoría A",
-"value": 100
-},
-// ... más puntos
-],
-"filters": [
-{
-"name": "Categoría",
-"field": "category",
-"options": ["Categoría A", "Categoría B", "Categoría C"]
-},
-// ... más filtros
-],
-"colors": {
-"Categoría A": "#FF0000",
-"Categoría B": "#00FF00",
-"Categoría C": "#0000FF"
+
+```
+interface Legend {
+  urlTitle: string;
+  text: string;
+  url: string;
+  urlText: string;
 }
+
+interface LegendOptions {
+  title: string;
+  colorKey: string;
+  items: string[];
 }
+
+interface KeyPoints {
+  tooltipTxt: string;
+  keysToShow: {
+    [key: string]: string;
+  };
+}
+
+interface Chart {
+  filterKey: string;
+  title: string;
+}
+
+interface FeatureKeys {
+  keyLocalidad: string;
+  keyDepartamento: string;
+}
+
+interface FilterData {
+  [key: string]: {
+    dataKey?: string;
+    label?: string;
+  };
+}
+
+interface InfoTab {
+  title: string;
+  items: string[];
+}
+
+interface DataStructure {
+  legend: Legend;
+  legendOptions: LegendOptions;
+  keyPoints: KeyPoints;
+  charts: Chart[];
+  featureKeys: FeatureKeys;
+  filtersData: FilterData;
+  infoTab: InfoTab;
+}
+```
 
 ## 🤝 Contribución
 
 Las contribuciones son bienvenidas. Por favor, sigue estos pasos:
 
-Haz fork del proyecto
-Crea una nueva rama (git checkout -b feature/AmazingFeature)
-Haz commit de tus cambios (git commit -m 'Add some AmazingFeature')
-Haz push a la rama (git push origin feature/AmazingFeature)
-Abre un Pull Request
+- Haz fork del proyecto
+- Crea una nueva rama (git checkout -b feature/AmazingFeature)
+- Haz commit de tus cambios (git commit -m 'Add some AmazingFeature')
+- Haz push a la rama (git push origin feature/AmazingFeature)
+- Abre un Pull Request
 
 ## 📞 Contacto
 
-Tu Nombre - @tu_twitter - email@ejemplo.com
-Link del proyecto: https://github.com/tu-usuario/tu-repositorio
+- Hugo Fucksmann
+- https://www.linkedin.com/in/hugofucksmann/
+- hugoffuksmann@gmail.com
