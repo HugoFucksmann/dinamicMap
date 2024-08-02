@@ -272,7 +272,7 @@ const DistanciaFilter = () => {
 };
 
 const inputStyle = {
-  width: "100%",
+  width: "90%",
   borderRadius: 6,
   padding: 2,
   border: "solid grey 1px",
@@ -294,4 +294,5 @@ export const filters = [
   { SelectFilterTwo: SelectFilterTwo },
   { SelectFilterOne: SelectFilterOne },
   { CheckboxFilter: CheckboxFilter },
+  { DistanciaFilter: DistanciaFilter },
 ];

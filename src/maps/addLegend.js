@@ -2,7 +2,7 @@ import L from "leaflet";
 import { generateColorsWithTransparency } from "../utils/generateColors";
 
 export function addLegend(container, legendOptions) {
-  if (container._legendControl) return;
+  if (container._legendControl) return false;
   let legend = L.control({ position: "bottomright" });
   legend.onAdd = function () {
     let div = L.DomUtil.create("div", "legend");
@@ -26,4 +26,6 @@ export function addLegend(container, legendOptions) {
   };
 
   legend.addTo(container);
+
+  return true;
 }

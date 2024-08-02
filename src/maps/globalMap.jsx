@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useCallback } from "react";
+import React, { useEffect, useState, useCallback, useRef } from "react";
 import { useLeafletContext } from "@react-leaflet/core";
 import "leaflet/dist/leaflet.css";
 import "leaflet.markercluster";
@@ -38,11 +38,11 @@ const GlobalMap = ({ geoJSONData, legendOptions, keyPoints, featureKeys }) => {
 
   const context = useLeafletContext();
   const container = context.layerContainer || context.map;
+  const legendRef = useRef(null);
+  const markersGroupRef = useRef(null);
+  const selectedCircleRef = useRef(null);
 
-  const [isLegend, setIsLegend] = useState(null);
-  const [markersGroup, setMarkersGroup] = useState(null);
   const [selectedCoordinates, setSelectedCoordinates] = useState(null);
-  const [selectedCircle, setSelectedCircle] = useState(null);
 
   const handleDistanciaClick = useCallback(
     (e) => {
@@ -55,13 +55,13 @@ const GlobalMap = ({ geoJSONData, legendOptions, keyPoints, featureKeys }) => {
         radius: rangeMarket * 500,
       }).addTo(container);
 
-      if (selectedCircle) {
-        container.removeLayer(selectedCircle);
+      if (selectedCircleRef.current) {
+        container.removeLayer(selectedCircleRef.current);
       }
 
-      setSelectedCircle(circle);
+      selectedCircleRef.current = circle;
     },
-    [container, isSelectedCircle, rangeMarket, selectedCircle]
+    [container, isSelectedCircle, rangeMarket]
   );
 
   const parksGeoJson = new L.GeoJSON(geoJSONData, {
@@ -87,18 +87,18 @@ const GlobalMap = ({ geoJSONData, legendOptions, keyPoints, featureKeys }) => {
         : "";
       layer.bindTooltip(txt_tooltip);
 
-      if (selectedCircle && isSelectedCircle) {
+      if (selectedCircleRef.current && isSelectedCircle) {
         const pointLatLng = L.latLng(
           layer.feature.geometry.coordinates[1],
           layer.feature.geometry.coordinates[0]
         );
 
         const distanceInMeters = pointLatLng.distanceTo(
-          selectedCircle.getLatLng()
+          selectedCircleRef.current.getLatLng()
         );
         const distanceInKilometers = distanceInMeters / 1000;
 
-        if (distanceInMeters <= selectedCircle.getRadius()) {
+        if (distanceInMeters <= selectedCircleRef.current.getRadius()) {
           const distanceText =
             distanceInMeters < 1000
               ? `${distanceInMeters.toFixed(0)} m`
@@ -146,30 +146,32 @@ const GlobalMap = ({ geoJSONData, legendOptions, keyPoints, featureKeys }) => {
   });
 
   useEffect(() => {
-    if (markersGroup) {
-      container.removeLayer(markersGroup);
+    if (markersGroupRef.current) {
+      container.removeLayer(markersGroupRef.current);
     }
 
-    if (!isSelectedCircle && selectedCircle) {
-      container.removeLayer(selectedCircle);
+    if (!isSelectedCircle && selectedCircleRef.current) {
+      container.removeLayer(selectedCircleRef.current);
     }
 
     if (container) {
       container.on("click", handleDistanciaClick);
     }
 
-    if (geoJSONData.name == "secgenero.areas_mujer(geom)") {
+    if (geoJSONData.name === "secgenero.areas_mujer(geom)") {
       parksGeoJson.addTo(container);
-      setMarkersGroup(parksGeoJson);
+      markersGroupRef.current = parksGeoJson;
     } else {
       const markersAll = L.markerClusterGroup().addLayer(parksGeoJson);
       markersAll.addTo(container);
-      setMarkersGroup(markersAll);
+      markersGroupRef.current = markersAll;
     }
 
-    if (!isLegend) {
-      addLegend(container, legendOptions);
-      setIsLegend(true);
+    if (!legendRef.current) {
+      const legend = addLegend(container, legendOptions);
+      if (legend) {
+        legendRef.current = legend;
+      }
     }
 
     return () => {
@@ -183,7 +185,6 @@ const GlobalMap = ({ geoJSONData, legendOptions, keyPoints, featureKeys }) => {
     selectedOne,
     selectedTwo,
     selectedCoordinates,
-    selectedCircle,
     isSelectedCircle,
     rangeMarket,
   ]);

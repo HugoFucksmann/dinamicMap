@@ -36,6 +36,15 @@
     "SelectFilterTwo": {
       "dataKey": "loc",
       "label": "Filtrar por localidad:"
+    },
+    "DistanciaFilter": {
+      "description": "Filtro de distancia. Filtra los datos según una distancia especificada desde un punto seleccionado en el mapa.",
+      "label": "Busqueda por distancia",
+      "range": {
+        "min": 1,
+        "max": 500,
+        "default": 50
+      }
     }
   },
   "infoTab": {

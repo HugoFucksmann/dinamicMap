@@ -22,12 +22,11 @@ const FilterTab = ({ geoJSONData, filtersData }) => {
 
 const filterDiv = {
   backgroundColor: "#ebf5ff",
-  padding: 12,
-  borderBottom: "solid #cfcfcf 1px",
   display: "inline-block",
   flexDirection: "column",
   width: "100%",
-  marginBottom: 6,
+  padding: 12,
+  marginBottom: 8,
   boxShadow: "0px 2px 2px #dedede",
 };
 

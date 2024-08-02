@@ -83,18 +83,26 @@ const Sidebar = ({ geoJSONData, charts, filtersData, infoTab }) => {
             />
           </button>
         </div>
-        <div id="contetSidebar">{tabs[activeTabIndex].content}</div>
+        <div style={contentContainerStyle} id="contetSidebar">
+          {tabs[activeTabIndex].content}
+        </div>
       </div>
     </>
   );
 };
 
+const contentContainerStyle = {
+  flexGrow: 1, // Permite que el contenido ocupe todo el espacio disponible
+  width: "100%", // Ocupa todo el ancho disponible
+};
+
 const menuStyles = (isMenuOpen) => {
   return {
     overflowY: "auto",
+    overflowX: "hidden",
     width: 280,
     height: "100%",
-    position: "absolute",
+    position: "fixed",
     top: 0,
     left: isMenuOpen ? 0 : -280,
     background: "#fff",
@@ -102,6 +110,7 @@ const menuStyles = (isMenuOpen) => {
     zIndex: 902,
     fontSize: "0.8em",
     boxShadow: "2px 2px 3px #c2c2c2",
+    flexDirection: "column",
   };
 };
 
