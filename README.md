@@ -36,10 +36,12 @@ Esta aplicación web React proporciona un mapa interactivo con funcionalidades d
 
 ## 🚀 Instalación
 
+```
 - git clone "https://github.com/HugoFucksmann/dinamicMap"
 - cd dinamicMap
 - npm install
 - npm run dev
+```
 
 ## 📖 Uso
 
